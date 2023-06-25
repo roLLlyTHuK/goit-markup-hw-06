@@ -69,16 +69,16 @@
     </header>
 
     <main>
-      <section class="hero-section">
+      <section class="hero">
         <div class="container">
-          <h1 class="title title-h1">Effective Solutions for Your Business</h1>
+          <h1 class="title">Effective Solutions for Your Business</h1>
           <button type="button" class="order-service-button" data-modal-open>
             Order Service
           </button>
         </div>
       </section>
 
-      <section class="strategy-section">
+      <section class="strategy section">
         <div class="container">
           <h2 class="visually-hidden">Benefits</h2>
 
@@ -135,12 +135,16 @@
         </div>
       </section>
 
-      <section class="product-section">
+      <section class="product section">
         <div class="container">
           <h2 class="product-section-title title-h2">What are we doing</h2>
           <ul class="product-section-list list">
             <li class="product-section-item">
               <img
+                srcset="
+                  ./images/main/desktop.jpg    1x,
+                  ./images/main/desktop@x2.jpg 2x
+                "
                 src="./images/main/desktop.jpg"
                 width="360"
                 alt="desktop product"
@@ -148,6 +152,10 @@
             </li>
             <li class="product-section-item">
               <img
+                srcset="
+                  ./images/main/mobile.jpg    1x,
+                  ./images/main/mobile@x2.jpg 2x
+                "
                 src="./images/main/mobile.jpg"
                 width="360"
                 alt="mobile product"
@@ -155,6 +163,10 @@
             </li>
             <li class="product-section-item">
               <img
+                srcset="
+                  ./images/main/desktopmobile.jpg    1x,
+                  ./images/main/desktopmobile@x2.jpg 2x
+                "
                 src="./images/main/desktopmobile.jpg"
                 width="360"
                 alt="all-in-one product"
@@ -164,12 +176,16 @@
         </div>
       </section>
 
-      <section class="team-section">
+      <section class="team section">
         <div class="container">
           <h2 class="team-section-title title-h2">Our Team</h2>
           <ul class="team-section-list list">
             <li class="team-cards-item">
               <img
+                srcset="
+                  ./images/main/foto1.jpg    1x,
+                  ./images/main/foto1@x2.jpg 2x
+                "
                 src="./images/main/foto1.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -211,7 +227,15 @@
               </div>
             </li>
             <li class="team-cards-item">
-              <img src="./images/main/foto2.jpg" alt="Tom Ford" width="264" />
+              <img
+                srcset="
+                  ./images/main/foto2.jpg    1x,
+                  ./images/main/foto2@x2.jpg 2x
+                "
+                src="./images/main/foto2.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="team-cards">
                 <h3 class="team-cards-title title-h3">Tom Ford</h3>
                 <p class="team-cards-text text">Frontend Developer</p>
@@ -249,6 +273,10 @@
             </li>
             <li class="team-cards-item">
               <img
+                srcset="
+                  ./images/main/foto3.jpg    1x,
+                  ./images/main/foto3@x2.jpg 2x
+                "
                 src="./images/main/foto3.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -290,6 +318,10 @@
             </li>
             <li class="team-cards-item">
               <img
+                srcset="
+                  ./images/main/foto4.jpg    1x,
+                  ./images/main/foto4@x2.jpg 2x
+                "
                 src="./images/main/foto4.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -332,7 +364,7 @@
           </ul>
         </div>
       </section>
-      <section class="customers-section">
+      <section class="customers section">
         <div class="container">
           <h2 class="customers-title title-h2">Customers</h2>
           <ul class="customers-list list">
@@ -541,18 +573,26 @@
           <a class="mobile-nav-item link" href="">Contacts</a>
         </li>
       </ul>
+
       <ul class="mobile-contacts list">
-        <li class="mobile-contacts-item">
-          <a class="link" href="tel:+110001111111" target="_blank"
+        <li>
+          <a
+            class="mobile-contacts-item link"
+            href="tel:+110001111111"
+            target="_blank"
             >+11 (000) 111-11-11</a
           >
         </li>
         <li>
-          <a class="link" href="mailto:info@devstudio.com" target="_blank"
+          <a
+            class="mobile-contacts-item link"
+            href="mailto:info@devstudio.com"
+            target="_blank"
             >info@devstudio.com</a
           >
         </li>
       </ul>
+
       <ul class="mobile-social list">
         <li class="mobile-social-item">
           <a class="link" href="https://www.instagram.com/" target="_blank">
