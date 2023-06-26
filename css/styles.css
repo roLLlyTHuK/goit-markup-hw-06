@@ -599,7 +599,7 @@ address {
   align-items: flex-start;
   gap: 40px;
   padding: 0px;
-  margin-bottom: 100px;
+  margin-bottom: 284px;
 }
 .mobile-nav-item {
   font-weight: 700;
@@ -655,7 +655,9 @@ address {
 @media screen and (max-width: 427px) {
   .mobile-nav-item {
     font-size: 24px;
+    margin-bottom: auto;
   }
+
   .mobile-contacts-item {
     font-size: 18px;
   }
