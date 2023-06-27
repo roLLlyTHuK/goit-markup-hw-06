@@ -163,9 +163,9 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  padding: 24px 0;
   letter-spacing: 0.02em;
   color: var(--navi-blue-color);
-  padding: 24px 0;
   position: relative;
   transition: color var(--transition);
 }
@@ -191,13 +191,13 @@ p {
 }
 address {
   font-style: normal;
-  padding: 24px 0;
+  font-size: 12px;
+  padding: 16px 0;
   margin-left: auto;
 }
 .list-contacts {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
   color: var(--slate-color);
   transition: color var(--transition);
 }
@@ -219,7 +219,6 @@ address {
 .footer-tab {
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 .footer-tab-content {
   margin: 0 auto;
@@ -233,7 +232,8 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--iris-color);
-  display: inline-block;
+  display: block;
+  text-align: center;
   margin-bottom: 16px;
 }
 .accent-footer {
@@ -253,6 +253,7 @@ address {
   font-weight: 500;
   color: var(--white-color);
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-icons-list {
   display: flex;
@@ -277,6 +278,7 @@ address {
   color: var(--white-color);
   font-weight: 500;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-subscribe-form {
   flex-direction: column;
@@ -563,6 +565,8 @@ address {
   fill: var(--navi-blue-color);
 }
 .mobile-container {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
@@ -570,7 +574,7 @@ address {
   height: 100%;
   padding: 80px 0 40px 40px;
   transform: translateX(-100%);
-  transition: transform (--transition);
+  transition: transform 500ms ease-in-out;
   background: var(--white-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -599,7 +603,7 @@ address {
   align-items: flex-start;
   gap: 40px;
   padding: 0px;
-  margin-bottom: 284px;
+  margin-bottom: auto;
 }
 .mobile-nav-item {
   font-weight: 700;
@@ -655,7 +659,6 @@ address {
 @media screen and (max-width: 427px) {
   .mobile-nav-item {
     font-size: 24px;
-    margin-bottom: auto;
   }
 
   .mobile-contacts-item {
@@ -695,7 +698,9 @@ address {
   padding: 112px 0;
   max-width: 428px;
 }
-@media (min-resolution: 192dpi) {
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
   .hero-section {
     background-image: linear-gradient(
         to bottom,
@@ -884,8 +889,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 72px 16px;
 }
 .customers-item {
   width: calc((100% - 16px) / 2);
@@ -1028,7 +1032,6 @@ address {
   .address-list {
     display: flex;
     flex-direction: column;
-    column-gap: 12px;
   }
   .menu-toggle {
     display: none;
@@ -1047,7 +1050,9 @@ address {
     padding: 112px 0;
     max-width: 768px;
   }
-  @media (min-resolution: 192dpi) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(
           to bottom,
@@ -1070,19 +1075,24 @@ address {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0px;
-    gap: 0;
-    row-gap: 72px;
-    column-gap: 24px;
+    gap: 0 24px;
     margin: 0;
   }
   .benefits {
     display: none;
+  }
+  .strategy-section-title {
+    text-align: start;
   }
   .stratgy-section-item {
     width: calc((100% - 24px) / 2);
     text-align: left;
     margin: 0;
   }
+  .stratgy-section-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
   .product {
     display: none;
   }
@@ -1100,8 +1110,7 @@ address {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    row-gap: 64px;
-    column-gap: 24px;
+    gap: 64px 24px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -1119,6 +1128,9 @@ address {
   .footer-section {
     background-color: var(--navi-blue-color);
     padding: 96px 0;
+  }
+  .footer-logo {
+    text-align: start;
   }
   .footer-tab {
     display: flex;
@@ -1138,11 +1150,17 @@ address {
     margin-left: 24px;
     text-align: left;
   }
+  .social-text {
+    text-align: start;
+  }
   .footer-subscribe {
     margin: 0;
     margin-left: 108px;
 
     text-align: left;
+  }
+  .footer-subscribe-text {
+    text-align: start;
   }
   .footer-subscribe-form {
     display: flex;
@@ -1190,6 +1208,13 @@ address {
     display: flex;
     gap: 40px;
   }
+  address {
+    padding: 24px 0;
+    font-size: 16px;
+  }
+  .list-contacts {
+    line-height: 1.5;
+  }
   .address-list {
     display: flex;
     flex-direction: row;
@@ -1209,7 +1234,9 @@ address {
     padding: 188px 0;
     max-width: 1440px;
   }
-  @media (min-resolution: 192dpi) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(
           to bottom,
@@ -1242,6 +1269,10 @@ address {
     width: calc((100% - 72px) / 4);
     text-align: left;
     margin: 0;
+    margin-bottom: 0;
+  }
+  .stratgy-section-item:not(:last-child) {
+    margin-bottom: 0;
   }
   .product-section {
     display: block;
